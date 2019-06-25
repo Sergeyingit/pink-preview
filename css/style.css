@@ -306,19 +306,19 @@ template {
 @font-face {
   font-family: "Open Sans";
   font-display: swap;
-  src: local("Open Sans Regular"), url("../../fonts/opensans.woff") format("woff"), url("../../fonts/opensans.woff2") format("woff2");
-  font-weight: regular; }
+  src: local("Open Sans Regular"), url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.woff2") format("woff2");
+  font-weight: normal; }
 
 @font-face {
   font-family: "Open Sans";
   font-display: swap;
-  src: local("Open Sans Light"), url("../../fonts/opensanslight.woff") format("woff"), url("../../fonts/opensanslight.woff2") format("woff2");
-  font-weight: light; }
+  src: local("Open Sans Light"), url("../fonts/opensanslight.woff") format("woff"), url("../fonts/opensanslight.woff2") format("woff2");
+  font-weight: lighter; }
 
 @font-face {
   font-family: "Open Sans";
   font-display: swap;
-  src: local("Open Sans Bold"), url("../../fonts/opensansbold.woff") format("woff"), url("../../fonts/opensansbold.woff2") format("woff2");
+  src: local("Open Sans Bold"), url("../fonts/opensansbold.woff") format("woff"), url("../fonts/opensansbold.woff2") format("woff2");
   font-weight: bold; }
 
 html {
@@ -763,11 +763,37 @@ img {
   border: none;
   border-radius: 2px; }
 
+.button--form:hover,
+.button--form:focus {
+  background-color: #1c9b5e; }
+
+.button--form:active {
+  color: rgba(255, 255, 255, 0.3); }
+
+.button--form:disabled {
+  background-color: #e5e5e5; }
+
+.button--modal {
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: #2aab6d;
+  border: none;
+  border-radius: 2px; }
+
+.button--modal:hover,
+.button--modal:focus {
+  background-color: #1c9b5e; }
+
+.button--modal:active {
+  color: rgba(255, 255, 255, 0.3); }
+
 @media (min-width: 660px) {
   .button {
     width: 300px;
     background-color: transparent; }
   .button--form {
+    background-color: #2aab6d; }
+  .button--modal {
     background-color: #2aab6d; }
   .button--submit {
     width: 260px; }
@@ -778,7 +804,9 @@ img {
   .button--submit {
     width: 182px; }
   .button--reset {
-    width: 182px; } }
+    width: 182px; }
+  .button--modal-succes {
+    width: 460px; } }
 
 .download {
   background-color: #1d2631; }
@@ -2975,5 +3003,91 @@ img {
     width: 320px; }
   .form__note--desktop {
     display: inline; } }
+
+.modal {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #ffffff;
+  width: 320px;
+  border-radius: 2px;
+  display: none;
+  -webkit-box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+          box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15); }
+
+.modal--error {
+  padding-top: 40px;
+  padding-bottom: 56px; }
+
+.modal--success {
+  padding-top: 40px; }
+
+.modal--success .modal__text {
+  margin-bottom: 30px; }
+
+.modal__title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 26px; }
+
+.modal__text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283645;
+  text-align: center;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 40px; }
+
+.modal__wrapper--success {
+  background-color: #f2f2f2;
+  padding: 48px 0;
+  padding-bottom: 52px; }
+
+@media (min-width: 660px) {
+  .modal {
+    width: 460px; }
+  .modal__title {
+    font-size: 30px;
+    line-height: 40px;
+    width: 260px;
+    margin-bottom: 22px; }
+  .modal__text {
+    font-size: 18px;
+    line-height: 24px;
+    width: 315px;
+    margin-bottom: 40px; }
+  .modal--success .modal__text {
+    margin-bottom: 35px; }
+  .modal--success br {
+    display: none; }
+  .modal--error {
+    padding-bottom: 50px; } }
+
+@media (min-width: 960px) {
+  .modal {
+    width: 780px; }
+  .modal__title {
+    width: 430px;
+    margin-bottom: 24px; }
+  .modal__text {
+    width: 390px;
+    margin-bottom: 62px; }
+  .modal--success .modal__text {
+    margin-bottom: 38px; }
+  .modal__wrapper {
+    background-color: #f2f2f2; }
+  .modal__wrapper--error {
+    background-color: #f2f2f2;
+    padding: 48px 0;
+    padding-bottom: 52px; } }
 
 /*# sourceMappingURL=style.css.map */
